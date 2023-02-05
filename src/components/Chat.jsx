@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Title from '../components/Title';
+import Title from './Title';
 import { IoCaretForward } from "react-icons/io5";
 import { IoCaretBack } from "react-icons/io5";
 import Peer from 'skyway-js'
