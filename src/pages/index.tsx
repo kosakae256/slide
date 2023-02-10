@@ -6,7 +6,7 @@ import Peer from 'skyway-js'
 import { useChannel } from '../hooks/AblyReactEffect';
 import Chat from '../components/Chat';
 
-const maxPage = 5
+const maxPage = 55
 
 const PdfPage = () => {
   const [page, setPage] = useState(0);
@@ -15,7 +15,7 @@ const PdfPage = () => {
   useEffect(() => {
     const tmpImgs = [];
     for (let i = 0; i < maxPage; i++) {
-      tmpImgs.push(`./slide/slide${i + 1}.PNG`);
+      tmpImgs.push(`./figma_slide/slide${i + 1}.PNG`);
     }
     setImgs(tmpImgs);
   }, []);
