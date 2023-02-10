@@ -15,7 +15,7 @@ const PdfPage = () => {
   useEffect(() => {
     const tmpImgs = [];
     for (let i = 0; i < maxPage; i++) {
-      tmpImgs.push(`/figma_slide/slide${i + 1}.PNG`);
+      tmpImgs.push(`/figma_slide/slide${i + 1}.png`);
     }
     setImgs(tmpImgs);
   }, []);
