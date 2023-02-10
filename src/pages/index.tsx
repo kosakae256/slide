@@ -26,6 +26,18 @@ const PdfPage = () => {
     }
   }
 
+  const handleKeyDown = (event: KeyboardEvent) => {
+    console.log("a")
+    // Enterキーの場合処理を行う
+    if (event.key === 'Enter') {
+      setPage((rev) => rev + 1);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown, false)
+  }, [])
+
   return (
     <>
       <div className="w-screen h-screen flex flex-col">
