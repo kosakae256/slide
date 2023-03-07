@@ -46,7 +46,7 @@ const PdfPage = () => {
     <>
       <div className="w-screen h-screen flex flex-row items-center justify-center relative drawer drawer-mobile">
         <SideBar imgs={imgs} page={page} setPage={setPage} isDrawerOpen={isDrawerOpen} />
-        <button className="w-12 h-12 absolute left-2 top-2 z-20 bg-black bg-opacity-50 rounded-full flex items-center justify-center" onClick={() => setIsDrawer((rev) => (!rev))}>
+        <button className="w-12 h-12 absolute left-2 top-2 z-30 bg-black bg-opacity-50 rounded-full flex items-center justify-center" onClick={() => setIsDrawer((rev) => (!rev))}>
           <RxHamburgerMenu className="h-8 w-8 text-white" />
         </button>
         <img src={imgs[page]} className="h-full w-2 flex-auto object-contain" />
@@ -113,7 +113,7 @@ const SideBar = ({ imgs, page, setPage, isDrawerOpen }) => {
 
   return (
     <>
-      <ul className={`w-40 h-full bg-white flex flex-col space-y-2 px-4 pt-16 pb-8 overflow-y-auto ${!isDrawerOpen && "hidden"}`}>
+      <ul className={`w-40 h-full bg-white flex flex-col space-y-2 px-4 pt-16 pb-8 overflow-y-auto z-20 ${!isDrawerOpen && "hidden"}`}>
         {imgs.map((v, i) => {
           return (
             <li className={`border w-full h-auto relative ${i == page && "border-theme border-2"} hover:border-2 hover:border-gray-500`} onClick={() => pageChange(i)} key={v}>
